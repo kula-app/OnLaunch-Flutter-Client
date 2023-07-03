@@ -1,14 +1,43 @@
-# Onlaunch
+# OnLaunch Flutter Client
 
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-OnLaunch is a service allowing app developers to notify app users about updates, warnings and maintenance Our open-source framework provides an easy-to-integrate client to communicate with the backend and display the user interface.
+<p align="center">
+  <a href="https://github.com/kula-app/OnLaunch-Flutter-Client/releases">
+    <img src="https://img.shields.io/github/release/kula-app/onlaunch-Flutter-client.svg"/>
+  </a>
+  <a href="https://codecov.io/gh/kula-app/OnLaunch-Flutter-Client" >
+    <img src="https://codecov.io/gh/kula-app/OnLaunch-Flutter-Client/branch/main/graph/badge.svg?token=SW7EXARH5G"/>
+  </a>
+  <a href="https://swiftpackageindex.com/kula-app/OnLaunch-Flutter-Client">
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkula-app%2FOnLaunch-Flutter-Client%2Fbadge%3Ftype%3Dswift-versions" alt="Swift Versions" />
+  </a>
+  <a href="https://github.com/kula-app/OnLaunch-Flutter-Client/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/kula-app/OnLaunch-Flutter-Client.svg"/>
+  </a>
+</p>
+
+<p align="center">
+    <sub>Created and maintained by <a href="https://kula.app">kula.app</a> and all the amazing <a href="https://github.com/kula-app/OnLaunch-Flutter-Client/graphs/contributors">contributors</a>.</sub>
+</p>
+
+[OnLaunch](https://github.com/kula-app/OnLaunch) is a service allowing app developers to notify app
+users about updates, warnings and maintenance
+Our open-source framework provides an easy-to-integrate client to communicate with the backend and
+display the user interface.
+
+## Features
+
+- Display customizable messages to your app users
+- Set your app into maintenance mode with blocking messages
+- Easy to integrate with SwiftUI and UIKit
 
 ## Installation 💻
 
-**❗ In order to start using Onlaunch you must have the [Flutter SDK][flutter_install_link] installed on your machine.**
+**❗ In order to start using Onlaunch you must have the [Flutter SDK][flutter_install_link] installed
+on your machine.**
 
 Add `onlaunch` to your `pubspec.yaml`:
 
@@ -25,11 +54,46 @@ flutter packages get
 
 ---
 
+## Usage
+
+### Apps built with SwiftUI
+
+TODO
+
+### Options
+
+The OnLaunch Flutter client provides a couple of configuration options:
+
+| Name                     | Description                                                                                                                                                                                                                                                                  | Default                                                                                                                                                          |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `baseURL`                | Base URL where the OnLaunch API is hosted at. Change this to point to your self-hosted instance of the OnLaunch server.                                                                                                                                                      | `https://onlaunch.kula.app/api/`                                                                                                                                 |
+| `publicKey`              | Public key used to authenticate with the API                                                                                                                                                                                                                                 |                                                                                                                                                                  |
+| `shouldCheckOnConfigure` | Flag indicating if the client should check for new messages immediately after it has been configured.                                                                                                                                                                        | `true`                                                                                                                                                           |
+| `hostScene`              | Scene used to host the OnLaunch client UI. Required if you use UIKit with scenes                                                                                                                                                                                             |                                                                                                                                                                  |
+| `theme`                  | Custom theme used by the OnLaunch client UI. Adapt the values to change the theme to match your preferences. To see all possible configuration values, see [`Theme.swift`](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/Sources/OnLaunch/Theme/Theme.swift) | Default values as defined in `Theme.standard` in [Theme.swift](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/Sources/OnLaunch/Theme/Theme.swift) |
+
+## Contributing Guide
+
+Please see
+our [Contributing Guide](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/CONTRIBUTING.md)
+.
+
+## License
+
+Distributed under
+the [MIT License](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/LICENSE)
+
 ## Continuous Integration 🤖
 
-Onlaunch comes with a built-in [GitHub Actions workflow][github_actions_link] powered by [Very Good Workflows][very_good_workflows_link] but you can also add your preferred CI/CD solution.
+Onlaunch comes with a built-in [GitHub Actions workflow][github_actions_link] powered
+by [Very Good Workflows][very_good_workflows_link] but you can also add your preferred CI/CD
+solution.
 
-Out of the box, on each pull request and push, the CI `formats`, `lints`, and `tests` the code. This ensures the code remains consistent and behaves correctly as you add functionality or make changes. The project uses [Very Good Analysis][very_good_analysis_link] for a strict set of analysis options used by our team. Code coverage is enforced using the [Very Good Workflows][very_good_coverage_link].
+Out of the box, on each pull request and push, the CI `formats`, `lints`, and `tests` the code. This
+ensures the code remains consistent and behaves correctly as you add functionality or make changes.
+The project uses [Very Good Analysis][very_good_analysis_link] for a strict set of analysis options
+used by our team. Code coverage is enforced using the [Very Good Workflows][very_good_coverage_link]
+.
 
 ---
 
