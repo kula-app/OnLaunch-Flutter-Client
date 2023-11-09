@@ -1,5 +1,7 @@
-name: onlaunch
-description: OnLaunch is a service allowing app developers to notify app users about updates, warnings and maintenance Our open-source framework provides an easy-to-integrate client to communicate with the backend and display the user interface.
+name: flutter_onlaunch
+description: OnLaunch is a service allowing app developers to notify app users about updates,
+  warnings and maintenance Our open-source framework provides an easy-to-integrate client
+  to communicate with the backend and display the user interface.
 version: 0.1.0+1
 publish_to: none
 
@@ -10,9 +12,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  built_value: '>=8.4.0 <9.0.0'
+  built_collection: '>=5.1.1 <6.0.0'
+  dio: ^5.0.0
+  dio_smart_retry: ^5.0.0
+  one_of: '>=1.5.0 <2.0.0'
+  one_of_serializer: '>=1.5.0 <2.0.0'
+  shared_preferences: ^2.2.2
+  rxdart: ^0.27.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mocktail: ^0.3.0
   very_good_analysis: ^5.0.0
+  flutter_lints: ^2.0.1

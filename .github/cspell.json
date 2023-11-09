@@ -16,6 +16,7 @@
   ],
   "useGitignore": true,
   "words": [
-    "onlaunch"
+    "onlaunch",
+    "flutter_onlaunch"
   ]
 }
