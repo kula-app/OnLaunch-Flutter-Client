@@ -32,18 +32,18 @@ display the user interface.
 
 - Display customizable messages to your app users
 - Set your app into maintenance mode with blocking messages
-- Easy to integrate with SwiftUI and UIKit
+- Easy to integrate with existing Flutter apps
 
 ## Installation 💻
 
 **❗ In order to start using Onlaunch you must have the [Flutter SDK][flutter_install_link] installed
 on your machine.**
 
-Add `onlaunch` to your `pubspec.yaml`:
+Add `flutter_onlaunch` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  onlaunch:
+  flutter_onlaunch:
 ```
 
 Install it:
@@ -65,11 +65,10 @@ TODO
 The OnLaunch Flutter client provides a couple of configuration options:
 
 | Name                     | Description                                                                                                                                                                                                                                                                  | Default                                                                                                                                                          |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `baseURL`                | Base URL where the OnLaunch API is hosted at. Change this to point to your self-hosted instance of the OnLaunch server.                                                                                                                                                      | `https://onlaunch.kula.app/api/`                                                                                                                                 |
 | `publicKey`              | Public key used to authenticate with the API                                                                                                                                                                                                                                 |                                                                                                                                                                  |
 | `shouldCheckOnConfigure` | Flag indicating if the client should check for new messages immediately after it has been configured.                                                                                                                                                                        | `true`                                                                                                                                                           |
-| `hostScene`              | Scene used to host the OnLaunch client UI. Required if you use UIKit with scenes                                                                                                                                                                                             |                                                                                                                                                                  |
 | `theme`                  | Custom theme used by the OnLaunch client UI. Adapt the values to change the theme to match your preferences. To see all possible configuration values, see [`Theme.swift`](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/Sources/OnLaunch/Theme/Theme.swift) | Default values as defined in `Theme.standard` in [Theme.swift](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/Sources/OnLaunch/Theme/Theme.swift) |
 
 ## Contributing Guide
