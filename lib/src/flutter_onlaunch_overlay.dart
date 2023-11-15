@@ -19,16 +19,11 @@ class OnLaunchOverlay extends StatefulWidget {
 
 class _OnLaunchOverlayState extends State<OnLaunchOverlay> {
   final dismissedIds = [];
-  bool _usedPreview = false;
 
   @override
   Widget build(BuildContext context) {
     if (widget.shouldCheckOnInit) {
       OnLaunch().check();
-    }
-    if (!_usedPreview) {
-      OnLaunch().preview(blocking: false);
-      _usedPreview = true;
     }
 
     return Stack(
@@ -76,9 +71,6 @@ class _OnLaunchOverlayState extends State<OnLaunchOverlay> {
                     elevation: 0,
                     padding: const EdgeInsets.all(20.0),
                     backgroundColor: Theme.of(context).colorScheme.secondary,
-                    // shape: RoundedRectangleBorder(
-                    //   borderRadius: BorderRadius.circular(10.0),
-                    // ),
                   ),
                   onPressed: () => dismissMessage(message),
                   child: Text(action.title,
