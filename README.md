@@ -56,20 +56,39 @@ flutter packages get
 
 ## Usage
 
-### Apps built with SwiftUI
+### Setup
 
-TODO
+Initialize the service in your main function:
+
+```dart
+void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  OnLaunch().init(publicKey, baseURL);
+  runApp(const MyApp());
+}
+```
+
+Wrap your top widget with OnLaunchOverlay. The overlay has to come AFTER the MaterialAppWidget (or
+similar)
+
+```dart
+  return MaterialApp(home: OnLaunchOverlay(child: MainWidget())
+);
+```
+
+### Test
+
+To verify the setup, you can call the test method `OnLaunch().preview({blocking})`.
 
 ### Options
 
 The OnLaunch Flutter client provides a couple of configuration options:
 
-| Name                     | Description                                                                                                                                                                                                                                                                  | Default                                                                                                                                                          |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `baseURL`                | Base URL where the OnLaunch API is hosted at. Change this to point to your self-hosted instance of the OnLaunch server.                                                                                                                                                      | `https://onlaunch.kula.app/api/`                                                                                                                                 |
-| `publicKey`              | Public key used to authenticate with the API                                                                                                                                                                                                                                 |                                                                                                                                                                  |
-| `shouldCheckOnConfigure` | Flag indicating if the client should check for new messages immediately after it has been configured.                                                                                                                                                                        | `true`                                                                                                                                                           |
-| `theme`                  | Custom theme used by the OnLaunch client UI. Adapt the values to change the theme to match your preferences. To see all possible configuration values, see [`Theme.swift`](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/Sources/OnLaunch/Theme/Theme.swift) | Default values as defined in `Theme.standard` in [Theme.swift](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/Sources/OnLaunch/Theme/Theme.swift) |
+| Name                     | Description                                                                                                             | Default                          |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| `baseURL`                | Base URL where the OnLaunch API is hosted at. Change this to point to your self-hosted instance of the OnLaunch server. | `https://onlaunch.kula.app/api/` |
+| `publicKey`              | Public key used to authenticate with the API                                                                            |                                  |
+| `shouldCheckOnConfigure` | Flag indicating if the client should check for new messages immediately after it has been configured.                   | `true`                           |
 
 ## Contributing Guide
 
@@ -110,7 +129,8 @@ To run all unit tests:
 very_good test --coverage
 ```
 
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
+To view the generated coverage report you can
+use [lcov](https://github.com/linux-test-project/lcov).
 
 ```sh
 # Generate Coverage Report
@@ -121,17 +141,31 @@ open coverage/index.html
 ```
 
 [flutter_install_link]: https://docs.flutter.dev/get-started/install
+
 [github_actions_link]: https://docs.github.com/en/actions/learn-github-actions
+
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
+
 [license_link]: https://opensource.org/licenses/MIT
+
 [logo_black]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_black.png#gh-light-mode-only
+
 [logo_white]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_white.png#gh-dark-mode-only
+
 [mason_link]: https://github.com/felangel/mason
+
 [very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
+
 [very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
+
 [very_good_cli_link]: https://pub.dev/packages/very_good_cli
+
 [very_good_coverage_link]: https://github.com/marketplace/actions/very-good-coverage
+
 [very_good_ventures_link]: https://verygood.ventures
+
 [very_good_ventures_link_light]: https://verygood.ventures#gh-light-mode-only
+
 [very_good_ventures_link_dark]: https://verygood.ventures#gh-dark-mode-only
+
 [very_good_workflows_link]: https://github.com/VeryGoodOpenSource/very_good_workflows
