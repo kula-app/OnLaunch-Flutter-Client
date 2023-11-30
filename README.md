@@ -72,8 +72,7 @@ Wrap your top widget with OnLaunchOverlay. The overlay has to come AFTER the Mat
 similar)
 
 ```dart
-  return MaterialApp(home: OnLaunchOverlay(child: MainWidget())
-);
+  return MaterialApp(home: OnLaunchOverlay(child: MainWidget()));
 ```
 
 ### Test
