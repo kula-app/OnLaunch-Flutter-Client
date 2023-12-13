@@ -1,9 +1,5 @@
 # OnLaunch Flutter Client
 
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
-[![License: MIT][license_badge]][license_link]
-
 <p align="center">
   <a href="https://github.com/kula-app/OnLaunch-Flutter-Client/releases">
     <img src="https://img.shields.io/github/release/kula-app/onlaunch-Flutter-client.svg"/>
