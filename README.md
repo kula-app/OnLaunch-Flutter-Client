@@ -96,18 +96,6 @@ our [Contributing Guide](https://github.com/kula-app/OnLaunch-Flutter-Client/blo
 Distributed under
 the [MIT License](https://github.com/kula-app/OnLaunch-Flutter-Client/blob/main/LICENSE)
 
-## Continuous Integration 🤖
-
-Onlaunch comes with a built-in [GitHub Actions workflow][github_actions_link] powered
-by [Very Good Workflows][very_good_workflows_link] but you can also add your preferred CI/CD
-solution.
-
-Out of the box, on each pull request and push, the CI `formats`, `lints`, and `tests` the code. This
-ensures the code remains consistent and behaves correctly as you add functionality or make changes.
-The project uses [Very Good Analysis][very_good_analysis_link] for a strict set of analysis options
-used by our team. Code coverage is enforced using the [Very Good Workflows][very_good_coverage_link]
-.
-
 ---
 
 ## Running Tests 🧪
