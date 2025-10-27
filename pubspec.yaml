@@ -15,7 +15,7 @@ dependencies:
   built_value: '>=8.4.0 <9.0.0'
   built_collection: '>=5.1.1 <6.0.0'
   dio: ^5.0.0
-  dio_smart_retry: ^5.0.0
+  dio_smart_retry: 7.0.1
   one_of: '>=1.5.0 <2.0.0'
   one_of_serializer: '>=1.5.0 <2.0.0'
   shared_preferences: ^2.2.2
